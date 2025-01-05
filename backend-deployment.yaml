@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: fastapi-backend
+        image: hispanie_backend-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3201
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://postgres:yourpassword@postgres-service:5432/yourdatabase"
+        - name: SECRET_KEY
+          value: "your_secret_key"
