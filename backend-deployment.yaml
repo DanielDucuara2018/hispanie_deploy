@@ -19,8 +19,11 @@ spec:
         image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie_backend-app:0.1
         ports:
         - containerPort: 3201
-        env:
-        - name: DATABASE_URL
-          value: "postgresql://postgres:yourpassword@postgres-service:5432/yourdatabase"
-        - name: SECRET_KEY
-          value: "your_secret_key"
+        # env:
+        # - name: DATABASE_URL
+        #   value: "postgresql://postgres:yourpassword@postgres-service:5432/yourdatabase"
+        # - name: SECRET_KEY
+        #   value: "your_secret_key"
+        resources:
+          requests:
+            cpu: 200m

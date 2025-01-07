@@ -19,3 +19,6 @@ spec:
         image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie-app:0.1
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 200m
