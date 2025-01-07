@@ -9,4 +9,4 @@ spec:
   - protocol: TCP
     port: 3201
     targetPort: 3201
-  type: ClusterIP
+  type: NodePort
