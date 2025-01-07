@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: react-frontend
-        image: hispanie-app:latest
-        imagePullPolicy: Never
+        image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie-app:0.1
         ports:
         - containerPort: 80

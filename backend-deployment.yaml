@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: fastapi-backend
-        image: hispanie_backend-app:latest
-        imagePullPolicy: Never
+        image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie_backend-app:0.1
         ports:
         - containerPort: 3201
         env:
