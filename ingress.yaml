@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: app-ingress
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: app-hispanie-ip
+    kubernetes.io/ingress.global-static-ip-name: api-hispanie-ip
     kubernetes.io/ingress.class: "nginx"
     # nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/use-regex: "true"
@@ -15,6 +15,16 @@ metadata:
     # TODO add regex (.*) to handle /api/v1/something and /events
 spec:
   rules:
+  - host: api.hispanie.com
+    http:
+      paths:
+      - path: /api/v1
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 3201
   - host: app.hispanie.com
     http:
       paths:
