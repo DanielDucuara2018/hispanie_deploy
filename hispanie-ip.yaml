@@ -1,7 +1,0 @@
-# gcloud compute addresses create hispanie-ip --global
-apiVersion: compute.cnrm.cloud.google.com/v1beta1
-kind: ComputeAddress
-metadata:
-  name: hispanie-ip
-spec:
-  location: global
