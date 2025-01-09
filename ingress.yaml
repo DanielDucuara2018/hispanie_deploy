@@ -29,7 +29,7 @@ spec:
   - host: app.hispanie.com
     http:
       paths:
-      - path: /*
+      - path: /
         pathType: ImplementationSpecific
         backend:
           service:
