@@ -10,7 +10,7 @@ metadata:
     # nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/enable-cors: "true"
-    nginx.ingress.kubernetes.io/cors-allow-origin: "https://app.hispanie.com"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "http://app.hispanie.com"
     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE"
     nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, Content-Type, Accept"
     nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
