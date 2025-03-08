@@ -26,3 +26,18 @@ kubectl apply -f ingress.yaml
 ```bash
 kubectl get deploy,svc,po,ingress
 ```
+
+## Delete all configuration
+
+```bash
+kubectl delete -f postgres-deployment.yaml
+kubectl delete -f backend-deployment.yaml
+kubectl delete -f frontend-deployment.yaml
+
+kubectl delete -f postgres-service.yaml
+kubectl delete -f backend-service.yaml
+kubectl delete -f frontend-service.yaml
+
+kubectl delete -f certificates.yaml
+kubectl delete -f ingress.yaml
+```
