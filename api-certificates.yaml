@@ -1,8 +1,7 @@
 apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
-  name: managed-cert
+  name: api-managed-cert
 spec:
   domains:
-    - app.hispanie.com
     - api.hispanie.com
