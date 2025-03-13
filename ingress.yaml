@@ -7,20 +7,8 @@ metadata:
     kubernetes.io/ingress.global-static-ip-name: hispanie-ip
     networking.gke.io/managed-certificates: "app-managed-cert,api-managed-cert"
     kubernetes.io/ingress.class: "gce"
-    # nginx.ingress.kubernetes.io/rewrite-target: /
-    # nginx.ingress.kubernetes.io/use-regex: "true"
-    # nginx.ingress.kubernetes.io/enable-cors: "true"
-    # nginx.ingress.kubernetes.io/cors-allow-origin: "http://app.hispanie.com"
-    # nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE"
-    # nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, Content-Type, Accept"
-    # nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
-    # TODO add regex (.*) to handle /api/v1/something and /events
 spec:
   ingressClassName: gce
-  # tls:
-  #   - hosts:
-  #       - app.hispanie.com
-  #       - api.hispanie.com
   rules:
     - host: api.hispanie.com
       http:
