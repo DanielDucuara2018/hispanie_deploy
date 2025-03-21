@@ -41,3 +41,7 @@ kubectl delete -f frontend-service.yaml
 kubectl delete -f certificates.yaml
 kubectl delete -f ingress.yaml
 ```
+
+## Basic architecture diagram
+
+![diagram](images/hispanie_architecture_diagram.png)
