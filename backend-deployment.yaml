@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -15,16 +15,16 @@ spec:
         app: backend
     spec:
       containers:
-      - name: fastapi-backend
-        image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie_backend-app:0.1
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3201
-        # env:
-        # - name: DATABASE_URL
-        #   value: "postgresql://postgres:yourpassword@postgres-service:5432/yourdatabase"
-        # - name: SECRET_KEY
-        #   value: "your_secret_key"
-        resources:
-          requests:
-            cpu: 200m
+        - name: fastapi-backend
+          image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie_backend-app:0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3201
+          # env:
+          # - name: DATABASE_URL
+          #   value: "postgresql://postgres:yourpassword@postgres-service:5432/yourdatabase"
+          # - name: SECRET_KEY
+          #   value: "your_secret_key"
+          resources:
+            requests:
+              cpu: 200m

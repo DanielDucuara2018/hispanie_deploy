@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -15,11 +15,11 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: react-frontend
-        image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie-app:0.1
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            cpu: 200m
+        - name: react-frontend
+          image: europe-west4-docker.pkg.dev/hispanie/hispanie-docker/hispanie-app:0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 200m
