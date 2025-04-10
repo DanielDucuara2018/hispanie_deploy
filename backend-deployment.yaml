@@ -27,4 +27,4 @@ spec:
           #   value: "your_secret_key"
           resources:
             requests:
-              cpu: 200m
+              cpu: 100m
