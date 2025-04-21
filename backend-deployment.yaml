@@ -27,4 +27,8 @@ spec:
           #   value: "your_secret_key"
           resources:
             requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
               cpu: 100m
+              memory: 256Mi
