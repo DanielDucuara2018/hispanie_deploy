@@ -1,12 +1,35 @@
-# Deploy kubernetes apps
+# Hispanie kubernetes deploy apps
 
-## create external api
+This repository contains Kubernetes deployment configurations for the **Hispanie** application, comprising a PostgreSQL database, a Python backend, and a React frontend.
+
+## 📁 Project Structure
+
+The repository includes the following Kubernetes manifests:
+
+- `postgres-deployment.yaml`
+- `postgres-service.yaml`
+- `postgres-pvc.yaml`
+- `backend-deployment.yaml`
+- `backend-service.yaml`
+- `frontend-deployment.yaml`
+- `frontend-service.yaml`
+- `ingress.yaml`
+- `api-certificates.yaml`
+- `app-certificates.yaml`
+
+These files define the deployments, services, ingress, and certificates necessary for the application.
+
+## 🚀 Deployment Instructions
+
+### 1. Create External IP Address (Google Cloud)
+
+To set up an external IP address for the application:
 
 ```bash
 gcloud compute addresses create hispanie-ip --global
 ```
 
-## Run configuration
+### 2. Run configuration
 
 ```bash
 kubectl apply -f postgres-deployment.yaml
@@ -21,13 +44,13 @@ kubectl apply -f certificates.yaml
 kubectl apply -f ingress.yaml
 ```
 
-## Check cluster
+### 3. Check cluster
 
 ```bash
 kubectl get deploy,svc,po,ingress
 ```
 
-## Delete all configuration
+### 4. Delete all configuration
 
 ```bash
 kubectl delete -f postgres-deployment.yaml
