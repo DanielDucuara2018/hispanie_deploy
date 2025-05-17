@@ -65,6 +65,20 @@ kubectl delete -f certificates.yaml
 kubectl delete -f ingress.yaml
 ```
 
+## 🧾 Additional Notes
+
+- Ensure that your Kubernetes cluster is properly configured and that you have the necessary permissions to deploy resources.
+
+- The ingress.yaml file should be configured to route traffic appropriately to the frontend and backend services.
+
+- Certificates defined in api-certificates.yaml and app-certificates.yaml are used to secure communication; ensure they are correctly set up.
+
+## 📄 Related Repositories
+
+- hispanie_backend: Backend service for the Hispania application.
+
+- hispanie_frontend: Frontend interface for the Hispania application.
+
 ## Basic architecture diagram
 
 ![diagram](images/hispanie_architecture_diagram.png)
